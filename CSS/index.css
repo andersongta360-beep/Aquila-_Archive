@@ -1,0 +1,20 @@
+@import url(barra-de-rolagem.css);
+@import url("barra-de-tarefa.css");
+@import url("barra-de-pesquisa.css");
+@import url(conteudo.css);
+
+* {
+  box-sizing: border-box;
+}
+*::selection {
+  background-color: #005a2e;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  width: 100%;
+
+  background-color: black;
+}

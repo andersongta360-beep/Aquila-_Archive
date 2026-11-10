@@ -1,0 +1,35 @@
+Black Piano
+
+Fundo principal
+
+ #0A0A0A
+
+Prata
+
+Textos e títulos
+
+ #C0C0C0
+
+Verde Principal
+
+Botões, destaques e animações
+
+ #00C853
+
+Verde Escuro
+
+Bordas e efeitos secundários
+
+ #005A2E
+
+Cinza Suave
+
+Cards e divisórias
+
+ #2A2A2A
+
+Branco Gelo
+
+Textos de alto contraste
+
+ #F5F5F5

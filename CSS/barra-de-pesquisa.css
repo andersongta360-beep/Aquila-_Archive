@@ -1,0 +1,63 @@
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+  margin-right: 29%;
+  width: 320px;
+  height: 30px;
+  background-color: #111;
+  border: 1px solid #2a2a2a;
+  transition: border-color 0.2s ease;
+}
+
+.barra-pesquisa:focus-within {
+  border-color: #00c853;
+}
+
+.barra-pesquisa input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 5px 8px;
+  color: #c0c0c0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 13px;
+}
+
+.barra-pesquisa input::placeholder {
+  color: #777;
+}
+
+.barra-pesquisa button {
+  height: 100%;
+  padding: 0 10px;
+  color: #00c853;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 21px;
+  transition: color 0.2s ease;
+}
+
+.barra-pesquisa button:hover {
+  color: white;
+}
+
+@media (max-width: 480px) {
+    .barra-pesquisa {
+        width: 130px;
+        height: 25px;
+        margin-right: 2%;
+    }
+
+    .barra-pesquisa input {
+        font-size: 10px;
+        padding: 3px 5px;
+    }
+
+    .barra-pesquisa button {
+        padding: 0 5px;
+        font-size: 16px;
+    }
+}
