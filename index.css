@@ -1,13 +1,13 @@
-@import url(./CSS/barra-de-rolagem.css);
-@import url("./CSS/barra-de-tarefa.css");
-@import url("./CSS/barra-de-pesquisa.css");
-@import url(./CSS/conteudo.css);
+@import url(./generico_em_paginas/generico.css);
+@import url(./CSS/aviso_inicial.css);
+@import url(./CSS/sobre_nos.css);
 
 * {
   box-sizing: border-box;
 }
 *::selection {
   background-color: #005a2e;
+  color: white;
 }
 
 body {

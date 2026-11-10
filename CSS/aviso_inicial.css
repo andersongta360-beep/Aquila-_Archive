@@ -1,0 +1,87 @@
+#aviso-inicial {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+     background:
+        radial-gradient(
+            ellipse at center,
+            rgba(0, 90, 46, 0.18) 0%,
+            rgba(0, 40, 20, 0.10) 35%,
+            rgba(0, 0, 0, 0.92) 100%
+        );
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    border: 2px solid #005A2E;
+    border-radius: 8px;
+
+    opacity: 1;
+    transition: opacity 0.6s ease;
+
+    z-index: 2000;
+}
+
+#aviso-inicial.fechando {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.janela-aviso {
+    width: 450px;
+    padding: 30px;
+
+     background: linear-gradient(
+        to bottom right,
+        #1A1A1A,
+        #0A0A0A,
+        #000000
+    );
+
+    border: 1px solid #005A2E;
+    border-radius: 8px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.8),
+        0 0 15px rgba(0, 200, 83, 0.08);
+
+    text-align: center;
+    color: #C0C0C0;
+
+}
+
+.janela-aviso h2 {
+    color: #00C853;
+}
+
+.janela-aviso p {
+    line-height: 1.6;
+}
+
+.janela-aviso span {
+    color: #808080;
+    font-size: 12px;
+}
+
+.janela-aviso button {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+
+    background: #005A2E;
+    color: white;
+
+    border: none;
+    cursor: pointer;
+
+    transition: background, 0.6s ease;
+}    
+.janela-aviso button:hover {
+    background: #00C845;
+}
