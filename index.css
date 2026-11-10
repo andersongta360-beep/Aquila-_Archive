@@ -1,7 +1,7 @@
-@import url(barra-de-rolagem.css);
-@import url("barra-de-tarefa.css");
-@import url("barra-de-pesquisa.css");
-@import url(conteudo.css);
+@import url(./CSS/barra-de-rolagem.css);
+@import url("./CSS/barra-de-tarefa.css");
+@import url("./CSS/barra-de-pesquisa.css");
+@import url(./CSS/conteudo.css);
 
 * {
   box-sizing: border-box;
