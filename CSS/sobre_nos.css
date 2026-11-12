@@ -1,73 +1,565 @@
 
+/* =========================================
+   IDENTIDADE VISUAL
+========================================= */
+
+:root {
+    --preto: #000000;
+    --preto-claro: #0A0A0A;
+    --cinza-escuro: #1A1A1A;
+    --prata: #C0C0C0;
+    --cinza: #A0A0A0;
+    --verde: #00C853;
+    --verde-escuro: #005A2E;
+    --verde-profundo: #003B1F;
+}
+
+/* =========================================
+   DESTAQUE PRINCIPAL
+========================================= */
+
 #conteiner-do-video-foto {
     display: flex;
     justify-content: flex-start;
-    margin-top: 70px;
-    border: 0.8mm solid #005A2E;
 
+    width: 100%;
     height: 75vh;
-    width: 100vw;
+    margin-top: 70px;
+
+    background: linear-gradient(
+        to bottom right,
+        #1A1A1A,
+        #0A0A0A,
+        #000000
+    );
+
+    border: 1px solid var(--verde-escuro);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.7),
+        0 1px 8px rgba(0, 200, 83, 0.08);
 }
+
+/* Imagem */
 
 #video-foto {
     width: 42vw;
-    color: #005A2E;
-    background-color: #1B1B1B;;
-
-    font-size: 40px;
+    background-color: #1B1B1B;
     text-align: center;
+    color: var(--verde-escuro);
+    font-size: 40px;
+    flex-shrink: 0;
 }
 
 #video-foto img {
+    display: block;
+
     width: 100%;
     height: 100%;
 
-    border: 0.8mm solid #005A2E;
-
+    object-fit: cover;
     object-position: center;
+
+    border-right: 1px solid var(--verde-escuro);
+    box-sizing: border-box;
 }
 
-#conteiner-do-video-foto #texto-do-video-foto{
-    padding: 50px;
+/* Texto ao lado da imagem */
+
+#texto-do-video-foto {
     width: 58vw;
+    padding: 50px;
 
     color: white;
+    z-index: 1;
+
+    box-sizing: border-box;
 }
-#texto-do-video-foto h1{
+
+#texto-do-video-foto h1 {
     font-family: "Exo 2", sans-serif;
-    color: #00C853;
+    color: var(--verde);
 }
-#texto-do-video-foto p{
+
+#texto-do-video-foto p {
     margin-left: 50px;
-    font-family: 'Source Sans 3', sans-serif;
-     letter-spacing: 2px;
-     line-height: 1.6;
-} 
-p span{
-    font-size: 20px;
-    color: #00C853;
+
+    font-family: "Source Sans 3", sans-serif;
+    letter-spacing: 2px;
+    line-height: 1.6;
 }
 
+p span {
+    font-size: 20px;
+    color: var(--verde);
+}
 
-main{
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    position: static; 
-    
-    width: 100%;
+    position: static;
+
+    width: 96%;
+    margin: 35px auto;
+    padding: 25px;
+
+    color: white;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        to bottom right,
+        #1A1A1A,
+        #0A0A0A,
+        #000000
+    );
+
+    border: 1px solid #1C3527;
+    border-top: 2px solid var(--verde-escuro);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.7),
+        0 1px 8px rgba(0, 200, 83, 0.08);
 }
 
-main div{
-    margin-top: 10px;
+/* Área de textos */
 
+#texto {
+    width: 99%;
+    margin-top: 10px;
     padding: 20px;
 
-    width: 99%;
+    box-sizing: border-box;
 
-    background-color: #2A2A2A;
-    border-left: 2px solid #005A2E;
+    background: linear-gradient(
+        145deg,
+        rgba(18, 25, 20, 0.97),
+        rgba(7, 11, 9, 0.98)
+    );
 
+    border-left: 2px solid var(--verde-escuro);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.65),
+        0 0 30px rgba(0, 200, 83, 0.04);
+
+    line-height: 2;
+}
+
+#texto div {
+    margin-top: 5vh;
+}
+
+/* =========================================
+   TÍTULOS E PARÁGRAFOS
+========================================= */
+
+main h2 {
+    margin-left: 5px;
+
+    font-family: "Exo 2", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+
+    color: var(--verde);
+
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+main p,
+#comp {
+    margin-left: 50px;
+
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 2;
+}
+
+main #comp {
+    color: var(--verde);
+    font-size: 22px;
+}
+
+/* =========================================
+   LINKS DO CONTEÚDO
+========================================= */
+
+main a {
+    color: var(--cinza);
+
+    font-family: "Rajdhani", sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+main a:hover {
+    color: var(--verde);
+}
+
+/* =========================================
+   SUMÁRIO
+========================================= */
+
+#conte_sumario {
+    width: 100%;
+    margin: 30px auto;
+}
+
+/* Barra principal */
+
+#sumario summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 25px;
+
+    background-color: #111;
+
+    border: 1px solid var(--verde-profundo);
+    border-left: 3px solid var(--verde-escuro);
+
+    color: var(--prata);
+
+    font-family: "Exo 2", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+/* Remove seta padrão */
+
+#sumario summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Seta personalizada */
+
+#sumario .seta {
+    width: 12px;
+    height: 12px;
+
+    border-right: 2px solid var(--verde);
+    border-bottom: 2px solid var(--verde);
+
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+/* Rotação da seta */
+
+#sumario details[open] .seta {
+    transform: rotate(225deg);
+}
+
+/* Lista */
+
+#sumario ol {
+    list-style: none;
+
+    margin: 0;
+    padding: 10px 25px;
+
+    background-color: #151515;
+
+    border: 1px solid #252525;
+    border-top: none;
+}
+
+/* Itens */
+
+#sumario li {
+    padding: 13px 5px;
+    border-bottom: 1px solid #252525;
+}
+
+/* Links */
+
+#sumario a {
+    color: var(--cinza);
+
+    font-family: "Rajdhani", sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+#sumario a:hover {
+    color: var(--verde);
+    padding-left: 8px;
+}
+
+/* =========================================
+   BOTÃO VOLTAR AO TOPO
+========================================= */
+
+#texto .SETA-PARA-TOPO {
+    display: block;
+
+    width: 50px;
+    height: auto;
+
+    margin-top: 15px;
+    margin-left: auto;
+
+    filter: brightness(0) saturate(100%)
+        invert(24%) sepia(95%)
+        saturate(1200%) hue-rotate(105deg)
+        brightness(95%) contrast(105%);
+
+    transition: filter 0.4s ease;
+}
+
+#texto .SETA-PARA-TOPO:hover {
+    filter: brightness(0) saturate(100%)
+        invert(55%) sepia(100%)
+        saturate(1500%) hue-rotate(105deg)
+        brightness(100%) contrast(105%);
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   RESPONSIVIDADE — TABLETS
+========================================= */
+
+@media screen and (max-width: 1024px) {
+
+    /* Destaque principal */
+
+    #conteiner-do-video-foto {
+        height: auto;
+        min-height: 60vh;
+    }
+
+    #video-foto {
+        width: 40%;
+    }
+
+    #texto-do-video-foto {
+        width: 60%;
+        padding: 30px;
+    }
+
+    #texto-do-video-foto p {
+        margin-left: 15px;
+        letter-spacing: 1px;
+    }
+
+    /* Conteúdo principal */
+
+    main {
+        width: 97%;
+        padding: 15px;
+    }
+
+    main #texto {
+        width: 100%;
+        padding: 18px;
+    }
+
+    main h2 {
+        font-size: 27px;
+    }
+
+    main p,
+    #comp {
+        margin-left: 20px;
+        font-size: 21px;
+    }
+
+    /* Sumário */
+
+    #sumario summary {
+        padding: 17px 20px;
+        font-size: 17px;
+    }
+
+    /* Seta de retorno */
+
+    #texto .SETA-PARA-TOPO {
+        width: 42px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVIDADE — CELULARES
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Destaque principal */
+
+    #conteiner-do-video-foto {
+        flex-direction: column;
+        height: auto;
+        margin-top: 70px;
+    }
+
+    #video-foto {
+        width: 100%;
+        height: 35vh;
+    }
+
+    #video-foto img {
+        border-right: none;
+        border-bottom: 1px solid var(--verde-escuro);
+    }
+
+    #texto-do-video-foto {
+        width: 100%;
+        padding: 25px;
+    }
+
+    #texto-do-video-foto h1 {
+        font-size: 27px;
+    }
+
+    #texto-do-video-foto p {
+        margin-left: 0;
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    /* Conteúdo principal */
+
+    main {
+        width: 100%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    main #texto {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #texto div {
+        margin-top: 35px;
+    }
+
+    main h2 {
+        font-size: 23px;
+        letter-spacing: 1px;
+    }
+
+    main p,
+    #comp {
+        margin-left: 5px;
+        font-size: 17px;
+        letter-spacing: 1px;
+        line-height: 1.8;
+    }
+
+    main #comp {
+        font-size: 18px;
+    }
+
+    /* Sumário */
+
+    #conte_sumario {
+        margin: 15px auto;
+    }
+
+    #sumario summary {
+        padding: 15px;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    #sumario ol {
+        padding: 8px 15px;
+    }
+
+    #sumario li {
+        padding: 10px 5px;
+    }
+
+    #sumario a {
+        font-size: 17px;
+    }
+
+    /* Links */
+
+    main a {
+        font-size: 17px;
+    }
+
+    /* Seta de retorno */
+
+    #texto .SETA-PARA-TOPO {
+        width: 35px;
+        margin-top: 10px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVIDADE — CELULARES PEQUENOS
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    #video-foto {
+        height: 28vh;
+    }
+
+    #texto-do-video-foto {
+        padding: 18px;
+    }
+
+    #texto-do-video-foto h1 {
+        font-size: 23px;
+    }
+
+    #texto-do-video-foto p {
+        font-size: 15px;
+    }
+
+    main h2 {
+        font-size: 20px;
+    }
+
+    main p,
+    #comp {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    #sumario summary {
+        font-size: 13px;
+        padding: 13px;
+    }
+
+    #sumario a {
+        font-size: 16px;
+    }
+
+    #texto .SETA-PARA-TOPO {
+        width: 30px;
+    }
 }
