@@ -228,8 +228,8 @@ main a:hover {
 
     background-color: #111;
 
-    border: 1px solid var(--verde-profundo);
-    border-left: 3px solid var(--verde-escuro);
+    border: 1px solid #003B1F;
+    border-left: 3px solid #005A2E;
 
     color: var(--prata);
 
@@ -240,6 +240,17 @@ main a:hover {
 
     cursor: pointer;
     list-style: none;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+
+#sumario summary:hover {
+    background-color: #191919;
+    border-color: #00C853;
 }
 
 /* Remove seta padrão */
@@ -248,17 +259,26 @@ main a:hover {
     display: none;
 }
 
+#sumario summary::marker {
+    content: "";
+}
+
 /* Seta personalizada */
 
 #sumario .seta {
+    display: inline-block;
+
     width: 12px;
     height: 12px;
 
-    border-right: 2px solid var(--verde);
-    border-bottom: 2px solid var(--verde);
+    border-right: 2px solid #00C853;
+    border-bottom: 2px solid #00C853;
 
     transform: rotate(45deg);
+
     transition: transform 0.3s ease;
+
+    flex-shrink: 0;
 }
 
 /* Rotação da seta */
@@ -335,20 +355,11 @@ main a:hover {
         brightness(100%) contrast(105%);
 }
 
-
-
-
-
-
-
-
 /* =========================================
    RESPONSIVIDADE — TABLETS
 ========================================= */
 
 @media screen and (max-width: 1024px) {
-
-    /* Destaque principal */
 
     #conteiner-do-video-foto {
         height: auto;
@@ -368,8 +379,6 @@ main a:hover {
         margin-left: 15px;
         letter-spacing: 1px;
     }
-
-    /* Conteúdo principal */
 
     main {
         width: 97%;
@@ -398,21 +407,16 @@ main a:hover {
         font-size: 17px;
     }
 
-    /* Seta de retorno */
-
     #texto .SETA-PARA-TOPO {
         width: 42px;
     }
 }
-
 
 /* =========================================
    RESPONSIVIDADE — CELULARES
 ========================================= */
 
 @media screen and (max-width: 768px) {
-
-    /* Destaque principal */
 
     #conteiner-do-video-foto {
         flex-direction: column;
@@ -444,8 +448,6 @@ main a:hover {
         font-size: 17px;
         letter-spacing: 1px;
     }
-
-    /* Conteúdo principal */
 
     main {
         width: 100%;
@@ -503,20 +505,15 @@ main a:hover {
         font-size: 17px;
     }
 
-    /* Links */
-
     main a {
         font-size: 17px;
     }
-
-    /* Seta de retorno */
 
     #texto .SETA-PARA-TOPO {
         width: 35px;
         margin-top: 10px;
     }
 }
-
 
 /* =========================================
    RESPONSIVIDADE — CELULARES PEQUENOS

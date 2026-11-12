@@ -1,0 +1,165 @@
+
+@import url(../generico_em_paginas/generico.css);
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: static;
+
+    width: 96%;
+    margin-top: 75px;
+    padding: 25px;
+
+    color: white;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        to bottom right,
+        #1A1A1A,
+        #0A0A0A,
+        #000000
+    );
+
+    border: 1px solid #1C3527;
+    border-top: 2px solid #005A2E;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.7),
+        0 1px 8px rgba(0, 200, 83, 0.08);
+}
+
+/* Área de textos */
+
+.fundo {
+    width: 99%;
+    margin-top: 10px;
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        145deg,
+        rgba(18, 25, 20, 0.97),
+        rgba(7, 11, 9, 0.98)
+    );
+
+    border-left: 2px solid #005A2E;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.65),
+        0 0 30px rgba(0, 200, 83, 0.04);
+
+    line-height: 2;
+}
+
+
+#bem-vindo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+     font-family: "Exo 2", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+
+    color: #00C853;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    text-shadow: 0 0 15px rgba(0, 200, 83, 0.15);
+}
+/* Barra principal */
+
+div summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 25px;
+
+    background-color: #111;
+
+    border: 1px solid #005A2E;
+    border-left: 3px solid #005A2E;
+
+    color: var(--prata);
+
+    font-family: "Exo 2", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    list-style: none;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+
+div summary:hover {
+    background-color: #191919;
+    border-color: #00C853;
+}
+
+/* Remove seta padrão */
+
+div summary::-webkit-details-marker {
+    display: none;
+}
+
+div summary::marker {
+    content: "";
+}
+
+/* Seta personalizada */
+
+div .seta {
+    display: inline-block;
+
+    width: 12px;
+    height: 12px;
+
+    border-right: 2px solid #00C853;
+    border-bottom: 2px solid #00C853;
+
+    transform: rotate(45deg);
+
+    transition: transform 0.3s ease;
+
+    flex-shrink: 0;
+}
+
+/* Rotação da seta */
+
+div details[open] .seta {
+    transform: rotate(225deg);
+}
+
+/* Espaçamento entre barras */
+
+div details {
+    margin-bottom: 12px;
+}
+
+/* Conteúdo expansível */
+
+div .conteudo {
+    padding: 20px 25px;
+
+    background-color: #0A0A0A;
+
+    border: 1px solid #005A2E;
+    border-top: none;
+
+    color: var(--prata);
+
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+}
